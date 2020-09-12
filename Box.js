@@ -14,7 +14,7 @@ class Box{
     display(){
 
       if(this.body.speed < 3){
-        super.display();
+       this.display();
        }
        else{
          World.remove(world, this.body);
