@@ -21,7 +21,7 @@ class Box{
          push();
          this.Visiblity = this.Visiblity - 5;
          tint(255,this.Visiblity);
-         image(this.image, this.body.position.x, this.body.position.y, 50, 50);
+         rect(this.body.position.x, this.body.position.y, 50, 50);
          pop();
        }
       var pos = this.body.position;
