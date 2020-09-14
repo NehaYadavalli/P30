@@ -6,6 +6,7 @@ class Box{
           'density':1.0
       }
       this.body = Bodies.rectangle(x, y, width, height, options);
+      this.image = loadImage("images.png");
       this.width = width;
       this.height = height;
       this.Visiblity = 255;
@@ -14,19 +15,9 @@ class Box{
     display(){
 
       if(this.body.speed < 3){
-       this.display();
-       }
-       else{
-         World.remove(world, this.body);
-         push();
-         this.Visiblity = this.Visiblity - 5;
-         tint(255,this.Visiblity);
-         rect(this.body.position.x, this.body.position.y, 50, 50);
-         pop();
-       }
-      var pos = this.body.position;
+        var pos = this.body.position
 
-      fill("black");
+        fill("black");
       var angle = this.body.angle;
       push();
       translate(this.body.position.x, this.body.position.y);
@@ -34,6 +25,17 @@ class Box{
       rectMode(CENTER);
       rect(0, 0, this.width, this.height);
       pop();
+       }
+       else{
+         World.remove(world, this.body);
+         
+         push();
+         this.Visibility = this.Visibility-5;
+         tint(255,this.Visibility);
+         rect(this.body.position.x, this.body.position.y, 50, 50);
+         pop();
+       }
+
 
 
 }
